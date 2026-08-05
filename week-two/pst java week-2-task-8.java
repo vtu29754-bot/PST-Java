@@ -1,15 +1,13 @@
-import java.util.Arrays;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Task8_TopKFrequentElements {
+class PST_Java_Week2_Task8 {
     public static int[] topKFrequent(int[] nums, int k) {
         return Arrays.stream(nums)
                      .boxed()
                      .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
-                     .entrySet()
-                     .stream()
+                     .entrySet().stream()
                      .sorted((e1, e2) -> Long.compare(e2.getValue(), e1.getValue()))
                      .limit(k)
                      .mapToInt(Map.Entry::getKey)
@@ -28,3 +26,13 @@ public class Task8_TopKFrequentElements {
         System.out.println("Output 2: " + Arrays.toString(topKFrequent(nums2, k2)));
     }
 }
+
+/*
+INPUT & OUTPUT:
+
+Input 1: nums = [1, 1, 1, 2, 2, 3], k = 2
+Output 1: [1, 2]
+
+Input 2: nums = [1], k = 1
+Output 2: [1]
+*/

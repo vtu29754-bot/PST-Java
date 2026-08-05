@@ -1,13 +1,14 @@
 import java.util.Arrays;
 
-public class Task6_FindTheHighestAltitude {
+class PST_Java_Week2_Task6 {
     public static int largestAltitude(int[] gain) {
-        return Arrays.stream(gain)
-                     .reduce(new int[]{0, 0}, (acc, g) -> {
-                         int currentAltitude = acc[1] + g;
-                         int maxAltitude = Math.max(acc[0], currentAltitude);
-                         return new int[]{maxAltitude, currentAltitude};
-                     }, (a, b) -> a)[0];
+        int currentAltitude = 0;
+        int maxAltitude = 0;
+        for (int g : gain) {
+            currentAltitude += g;
+            maxAltitude = Math.max(maxAltitude, currentAltitude);
+        }
+        return maxAltitude;
     }
 
     public static void main(String[] args) {
@@ -20,3 +21,13 @@ public class Task6_FindTheHighestAltitude {
         System.out.println("Output 2: " + largestAltitude(gain2));
     }
 }
+
+/*
+INPUT & OUTPUT:
+
+Input 1: gain = [-5, 1, 5, 0, -7]
+Output 1: 1
+
+Input 2: gain = [-4, -3, -2, -1, 4, 3, 2]
+Output 2: 0
+*/

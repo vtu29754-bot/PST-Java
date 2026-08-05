@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
-public class Task2_ShuffleTheArray {
+class PST_Java_Week2_Task2 {
     public static int[] shuffle(int[] nums, int n) {
         return IntStream.range(0, 2 * n)
                         .map(i -> (i % 2 == 0) ? nums[i / 2] : nums[n + i / 2])
@@ -20,3 +20,13 @@ public class Task2_ShuffleTheArray {
         System.out.println("Output 2: " + Arrays.toString(shuffle(nums2, n2)));
     }
 }
+
+/*
+INPUT & OUTPUT:
+
+Input 1: nums = [2, 5, 1, 3, 4, 7], n = 3
+Output 1: [2, 3, 5, 4, 1, 7]
+
+Input 2: nums = [1, 2, 3, 4, 4, 3, 2, 1], n = 4
+Output 2: [1, 4, 2, 3, 3, 2, 4, 1]
+*/

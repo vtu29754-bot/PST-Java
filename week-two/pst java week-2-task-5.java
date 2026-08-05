@@ -1,13 +1,14 @@
 import java.util.Arrays;
 
-public class Task5_MaximumSubarray {
+class PST_Java_Week2_Task5 {
     public static int maxSubArray(int[] nums) {
-        return Arrays.stream(nums)
-                     .reduce(new int[]{Integer.MIN_VALUE, 0}, (acc, x) -> {
-                         int currentSum = Math.max(x, acc[1] + x);
-                         int maxSoFar = Math.max(acc[0], currentSum);
-                         return new int[]{maxSoFar, currentSum};
-                     }, (a, b) -> a)[0];
+        int maxSoFar = nums[0];
+        int currentMax = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            currentMax = Math.max(nums[i], currentMax + nums[i]);
+            maxSoFar = Math.max(maxSoFar, currentMax);
+        }
+        return maxSoFar;
     }
 
     public static void main(String[] args) {
@@ -24,3 +25,16 @@ public class Task5_MaximumSubarray {
         System.out.println("Output 3: " + maxSubArray(nums3));
     }
 }
+
+/*
+INPUT & OUTPUT:
+
+Input 1: nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+Output 1: 6
+
+Input 2: nums = [1]
+Output 2: 1
+
+Input 3: nums = [5, 4, -1, 7, 8]
+Output 3: 23
+*/

@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Task4_RemoveDuplicatesFromSortedArray {
+class PST_Java_Week2_Task4 {
     public static int[] removeDuplicates(int[] nums) {
         return Arrays.stream(nums)
                      .distinct()
@@ -19,3 +19,13 @@ public class Task4_RemoveDuplicatesFromSortedArray {
         System.out.println("Output 2: k = " + result2.length + ", nums = " + Arrays.toString(result2));
     }
 }
+
+/*
+INPUT & OUTPUT:
+
+Input 1: nums = [1, 1, 2]
+Output 1: k = 2, nums = [1, 2]
+
+Input 2: nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+Output 2: k = 5, nums = [0, 1, 2, 3, 4]
+*/
