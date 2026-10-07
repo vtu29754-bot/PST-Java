@@ -1,4 +1,4 @@
-public class JavaFactory {
+class Week8_Task8_JavaFactory {
     interface Food {
         String getType();
     }

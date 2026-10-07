@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class JavaHashSet {
+class Week8_Task7_JavaHashSet {
     public static void main(String[] args) {
         String[] pair_left = {"john", "john", "john", "mary", "mary"};
         String[] pair_right = {"tom", "mary", "tom", "anna", "anna"};

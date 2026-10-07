@@ -1,4 +1,4 @@
-public class JavaSingleton {
+class Week8_Task3_JavaSingleton {
     static class Singleton {
         public String str;
         private static Singleton instance;

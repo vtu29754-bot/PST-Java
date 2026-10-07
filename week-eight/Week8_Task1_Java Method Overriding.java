@@ -1,4 +1,4 @@
-public class JavaMethodOverriding {
+class Week8_Task1_JavaMethodOverriding {
     static class Sports {
         String getName() {
             return "Generic Sports";

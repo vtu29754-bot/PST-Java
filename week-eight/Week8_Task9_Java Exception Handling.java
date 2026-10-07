@@ -1,4 +1,4 @@
-public class JavaExceptionHandling {
+class Week8_Task9_JavaExceptionHandling {
     static class MyCalculator {
         public long power(int n, int p) throws Exception {
             if (n < 0 || p < 0) {

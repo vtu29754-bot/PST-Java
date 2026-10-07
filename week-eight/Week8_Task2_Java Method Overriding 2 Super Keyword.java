@@ -1,4 +1,4 @@
-public class JavaMethodOverriding2SuperKeyword {
+class Week8_Task2_JavaMethodOverriding2SuperKeyword {
     static class BiCycle {
         String define_me() {
             return "a vehicle with pedals.";

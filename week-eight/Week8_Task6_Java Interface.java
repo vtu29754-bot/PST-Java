@@ -1,4 +1,4 @@
-public class JavaInterface {
+class Week8_Task6_JavaInterface {
     interface AdvancedArithmetic {
         int divisor_sum(int n);
     }

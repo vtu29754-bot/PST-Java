@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class JavaIterator {
+class Week8_Task5_JavaIterator {
     public static Iterator<Object> func(ArrayList<Object> mylist) {
         Iterator<Object> it = mylist.iterator();
         while (it.hasNext()) {

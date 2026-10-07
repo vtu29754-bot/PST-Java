@@ -1,7 +1,7 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class JavaExceptionHandlingTryCatch {
+class Week8_Task10_JavaExceptionHandlingTryCatch {
     public static void divide(String inputX, String inputY) {
         try {
             Scanner scX = new Scanner(inputX);

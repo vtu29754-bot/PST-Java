@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class JavaVisitorPattern {
+class Week8_Task4_JavaVisitorPattern {
     enum Color { RED, GREEN }
 
     abstract static class Tree {
